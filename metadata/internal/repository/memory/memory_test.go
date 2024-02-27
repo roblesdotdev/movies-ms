@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	model "github.com/roblesdotdev/movies-ms/metadata/pkg"
+	"github.com/roblesdotdev/movies-ms/metadata/pkg/model"
 )
 
 func TestMemoryRepository(t *testing.T) {

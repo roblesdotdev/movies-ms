@@ -5,7 +5,7 @@ import (
 	"sync"
 
 	"github.com/roblesdotdev/movies-ms/metadata/internal/repository"
-	model "github.com/roblesdotdev/movies-ms/metadata/pkg"
+	"github.com/roblesdotdev/movies-ms/metadata/pkg/model"
 )
 
 // Defines a memory movie metadata repository.
@@ -27,7 +27,7 @@ func (r *Repository) Get(_ context.Context, id string) (*model.Metadata, error) 
 	defer r.RUnlock()
 	m, ok := r.data[id]
 	if !ok {
-		return nil, repository.ErrorNotFound
+		return nil, repository.ErrNotFound
 	}
 	return m, nil
 }
