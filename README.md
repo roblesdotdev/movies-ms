@@ -46,3 +46,11 @@ go run main.go
 ```
 
 Visit Consul UI via http://localhost:8500.
+
+### Proto VS Json
+
+```
+$ make proto
+$ go mod tidy
+$ make bench
+```
